@@ -80,6 +80,28 @@ l
 v <- vector("list", length = 5)
 v
 
+## Factors
+f <- factor(c("yes", "yes", "no", "yes", "no")) 
+f
+table(f) 
+f
+
+lm(f)  "Special treatment
+glm(f)  for factors"
+
+## See the underlying representation of factor
+unclass(f)  
+
+f <- factor(c("yes", "yes", "no", "yes", "no"))
+f
+
+f  ## Levels are put in alphabetical order?  I don't see it...
+f <- factor(c("yes", "yes", "no", "yes", "no"),
+            levels = c("yes", "no"))
+f
+
+likeread.table()
+
 
 
 
