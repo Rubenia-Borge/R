@@ -102,6 +102,63 @@ f
 
 likeread.table()
 
+## Missing Values
+## NA?
+M <- c(NA, NA, NA, NA, 100, 200)  
+print(M)
+is.na(M)  ## is.na() return is a logical vector
+
+N <- c(3, 8000, NaN, NaN, NaN, NaN, NaN, NaN)
+is.nan(N) ## is.nan() return is a logical vector
+
+X <- c(9, 7, NA, NaN, NA, NaN)
+is.na(X)
+is.nan(X)
+
+## Dataframes: store tabular data in R
+## Dataframes are better suited for dplyr and ggplot2 
+D <- data.frame(f = 1:10, va = c(T, T, F, F, T, T, T, F, F, F)) 
+D
+nrow(D)
+ncol(D)
+
+"row.names()   info about each row of the dataframe
+ read.table()  implicit creation of a dataframe
+ read.csv()    implicit creation of a dataframe
+ data.frame()  explicit creation of a dataframe
+ data.matrix() converts a dataframe into a matrix
+ as.matrix()   coerces a dataframe to a matrix"
+
+##Names
+N <- 1:6  ## Names to a vector
+names(N)
+names(N) <- c("Omaha", "Colorado", "Kansas", "New York", "Seattle", "Los Angeles") 
+N
+names(N)
+
+
+L <- list("Los Angeles" = 1, Masaya = 2, Granada = 3) ## Naming a list
+L
+names(L)
+
+M <- matrix(11:16, nrow = 3, ncol = 3)
+dimnames(M) <- list(c("cotton", "candy", "cherry"), c("sugar", "pop", "soda")) ## Column and row names for matrices
+M
+colnames(M) <- c("Rarity", "Applejack", "Princess Luna")     
+rownames(M) <- c("Pinky Pie", "Fluttershy", "Rainbow Dash")
+M
+
+## Differences Data frames and Matrices
+" 
+data frames-- names(), row.names() -set column names, set row names
+matrix-- colnames(), rownames() -set column names, set row names
+
+"
+
+
+
+##Attributes attributes()
+attributes(data.frame())
 
 
 
